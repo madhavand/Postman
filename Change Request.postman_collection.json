@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "e3d73853-fbde-4ebd-92d5-27a03432da3c",
+		"name": "Change Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Change Request - JSON",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dev122785.service-now.com/api/now/table/change_request",
+					"protocol": "https",
+					"host": [
+						"dev122785",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"change_request"
+					],
+					"query": [
+						{
+							"key": "priority",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Change Request - Category Low",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dev122785.service-now.com/api/now/table/change_request?priority=4&sysparm_fields=sys_id,number,priority",
+					"protocol": "https",
+					"host": [
+						"dev122785",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"change_request"
+					],
+					"query": [
+						{
+							"key": "priority",
+							"value": "4"
+						},
+						{
+							"key": "sysparm_fields",
+							"value": "sys_id,number,priority"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Change Request - XML Param",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dev122785.service-now.com/api/now/table/change_request?category=software",
+					"protocol": "https",
+					"host": [
+						"dev122785",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"change_request"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "software"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "Madhav123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
